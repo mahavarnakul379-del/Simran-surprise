@@ -3,6 +3,53 @@
 <head>
 <title>For Simran 🤍</title>
 <style>
+
+  <head>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe6f0, #fff);
+      font-family: Arial;
+      text-align: center;
+    }
+
+    .flower {
+      position: absolute;
+      width: 80px;
+      top: 20px;
+      left: 20px;
+    }
+
+    button {
+      background: #ff4d6d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+  body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffe6f0, #fff);
+  text-align: center;
+}
+
+h1 {
+  color: #ff4d6d;
+}
+
+p {
+  color: #555;
+  font-size: 18px;
+}
+
+button {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
 body {
   background: linear-gradient(to right, #fceff9, #e0f7fa);
   font-family: Arial;
@@ -29,8 +76,20 @@ button {
 }
 </style>
 </head>
+<script>
+document.addEventListener("click", function(e) {
+  let heart = document.createElement("div");
+  heart.innerHTML = "❤️";
+  heart.style.position = "absolute";
+  heart.style.left = e.pageX + "px";
+  heart.style.top = e.pageY + "px";
+  document.body.appendChild(heart);
 
+  setTimeout(() => heart.remove(), 1000);
+});
+</script>
 <body>
+
 
 <div id="msg">
 Hey Simran (schatzi 🤍🌼),<br><br>
