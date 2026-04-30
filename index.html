@@ -7,20 +7,31 @@
 <style>
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Poppins', sans-serif;
   text-align: center;
   background: linear-gradient(to right, #ffdde1, #ee9ca7);
+  overflow-x: hidden;
 }
 
-/* Center content */
+/* Flowers in corners */
+.flower {
+  position: fixed;
+  width: 90px;
+}
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+
+/* Content */
 .container {
-  margin-top: 100px;
+  margin-top: 60px;
+  padding: 20px;
 }
 
-/* Text */
 h1 {
   color: white;
+  font-size: 40px;
 }
 
 p {
@@ -28,17 +39,40 @@ p {
   font-size: 18px;
 }
 
+/* Image gallery */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.gallery img {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
 /* Button */
 button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
   background: white;
   color: #ff4d6d;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
   cursor: pointer;
 }
 
-/* Floating hearts */
+/* Hearts */
 .heart {
   position: absolute;
   color: red;
@@ -55,18 +89,31 @@ button {
 
 <body>
 
+<!-- 🌸 Flowers -->
+<img src="https://pngimg.com/uploads/flower/flower_PNG102.png" class="flower top-left">
+<img src="https://pngimg.com/uploads/flower/flower_PNG102.png" class="flower top-right">
+<img src="https://pngimg.com/uploads/flower/flower_PNG102.png" class="flower bottom-left">
+<img src="https://pngimg.com/uploads/flower/flower_PNG102.png" class="flower bottom-right">
+
 <div class="container">
   <h1>Hey Simran ❤️</h1>
 
-  <p>I didn’t know how to say this directly...</p>
-  <p>But you became special to me 💖</p>
+  <p>You became special to me without me realizing...</p>
+  <p>I genuinely love having you in my life 💖</p>
+
+  <!-- 🖼️ Image Gallery -->
+  <div class="gallery">
+    <img src="img1.jpg">
+    <img src="img2.jpg">
+    <img src="img3.jpg">
+  </div>
 
   <button onclick="showLove()">Click me</button>
 </div>
 
 <script>
 function showLove() {
-  alert("I like you a lot ❤️");
+  alert("I like you... a lot ❤️");
 }
 
 function createHeart() {
